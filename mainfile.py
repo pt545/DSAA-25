@@ -1,4 +1,4 @@
-import BruteForcemk2
+import BruteForce
 import time
 print("========================================")
 print("EVENT PLANNER - RESULTS")
@@ -8,7 +8,7 @@ filename = "input_100.txt"
 limittype = "Time"
 print("Input File: " + filename)
 
-Data = BruteForcemk2.Information(filename,limittype)
+Data = BruteForce.Information(filename,limittype)
 
 #print(Data)
 # 0 Activities
@@ -20,7 +20,7 @@ print()
 
 print("--- BRUTE FORCE ALGORITHM ---")
 startime = time.time()
-BruteSol = BruteForcemk2.bruteforce(Data[0],Data[1],Data[2])
+BruteSol = BruteForce.bruteforce(Data[0],Data[1],Data[2])
 endtime = time.time()
 #print(BruteSol)
 print("Selected Activities:")
