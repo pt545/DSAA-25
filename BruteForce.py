@@ -71,7 +71,8 @@ def bruteforce(Activities,limits,limitind):
         elif totalenj > Best_solution[1][0]:
             # else it is compared with the best solution 
             # if it has a greater total enjoyment it becomes the best solution
-            Best_solution = (x,(totalenj,totaltime,totalbdg))
+            acts = dict([(i, Activities[i]) for i in x])
+            Best_solution = (acts,(totalenj,totaltime,totalbdg))
         
     # After the program finishes iterating though the possibilities the best solution found is returned
     return Best_solution
@@ -83,3 +84,18 @@ def powerset(activities):
     return chain.from_iterable(combinations(activities, r) for r in range(len(activities)+1))
 
 #https://docs.python.org/3/library/itertools.html#itertools-recipes
+
+
+def printSol(activities,totalenj,totaltime,totalbdg,execution_time):
+    print("--- BRUTE FORCE ALGORITHM ---")
+    
+    #print(BruteSol)
+    print("Selected Activities:")
+    
+    for i in activities:
+        print("-" + i + " (" + str(activities[i][0]) + " hours, £" + str(activities[i][1]) + ", enjoyement " + str(activities[i][2]) + ")")
+    print("Total Enjoyment:", totalenj)
+    print("Total Time Used:" , totaltime)
+    print("Total Cost:", totalbdg)
+
+    print(f"Execution Time:{execution_time:.6f}seconds")

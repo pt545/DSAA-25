@@ -77,14 +77,3 @@ def print_results( execution_time,selected_activities, max_enjoyment):
     print(f"Total Cost: £{total_cost}")
     print(f"Execution Time: {execution_time:.6f} seconds")
   
-
-
-print("Please enter file path")
-filePath = input()
-# Start timer
-start_time = time.perf_counter()
-end_time = time.perf_counter()
-execution_time = end_time - start_time
-number_of_activities, max_time, max_budget, activities = read_input(filePath)
-max_enjoyment, selected_activities = maximise_enjoyment(activities, max_time)
-print_results(execution_time,selected_activities, max_enjoyment)

@@ -4,7 +4,7 @@ print("========================================")
 print("EVENT PLANNER - RESULTS")
 print("========================================\n")
 
-filename = "input_100.txt"
+filename = "input_large.txt"
 limittype = "Time"
 print("Input File: " + filename)
 
